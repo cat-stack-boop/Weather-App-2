@@ -1,4 +1,6 @@
-# Weather App
+# Weather App (Global - CAT1 - AI Training for Software Engineering Graduates - 2025)
+
+### Giving vibe coding a go :P
 
 ## Description
 
@@ -9,19 +11,21 @@ This is a simple weather application built with React. The app allows users to e
 ```
 weather-app
 ├── public
-│   └── index.html          # Main HTML file
+│   └── index.html            # Main HTML file
 ├── src
-│   ├── components
-│   │   ├── WeatherDisplay.js # Component to display weather data
-│   │   └── SearchBar.js      # Component for user input
 │   ├── api
-│   │   └── weatherApi.js     # API calls for fetching weather data
-│   ├── App.js                # Main application component
-│   ├── index.js              # Entry point for the React app
-│   └── styles
-│       └── App.css           # CSS styles for the application
-├── package.json              # npm configuration file
-└── README.md                 # Project documentation
+│   │   └── weatherApi.js         # API calls for fetching weather data
+│   ├── components
+│   │   ├── WeatherDisplay.js     # Component to display weather data and forecast
+│   │   └── SearchBar.js          # Component for user input
+│   ├── styles
+│   │   └── App.css               # CSS styles for the application
+│   ├── utils
+│   │   └── weatherCodeMapping.js # Weather code to description mapping
+│   ├── App.js                    # Main application component
+│   ├── index.js                  # Entry point for the React app
+├── package.json                  # npm configuration file
+└── README.md                     # Project documentation
 ```
 
 ## Setup Instructions
@@ -63,6 +67,7 @@ For more information about testing in React, see the [Create React App testing d
 
 - User can input a city name to fetch weather data.
 - Displays current weather conditions in a clear format.
+- Shows a 5-day weather forecast for the selected city.
 - Responsive design for better user experience.
 
 ## Technologies Used
