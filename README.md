@@ -1,4 +1,6 @@
-# Weather App
+# Weather App (Global - CAT1 - AI Training for Software Engineering Graduates - 2025)
+
+### Giving vibe coding a go :P 
 
 ## Description
 
