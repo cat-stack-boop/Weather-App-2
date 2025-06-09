@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import SearchBar from "./components/SearchBar";
 import fetchWeatherByCity from "./api/weatherApi";
 import WeatherDisplay from "./components/WeatherDisplay";
@@ -50,6 +49,5 @@ const App = () => {
   );
 };
 
-App.propTypes = {};
 
 export default App;
