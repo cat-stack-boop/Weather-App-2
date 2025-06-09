@@ -3,8 +3,10 @@ import { render, fireEvent, screen, waitFor } from "@testing-library/react";
 import SearchBar from "../SearchBar";
 
 // Helper to render SearchBar with a mock fetchWeatherByCity
-const setup = (fetchWeatherByCity = jest.fn()) => {
-  render(<SearchBar fetchWeatherByCity={fetchWeatherByCity} />);
+const setup = (fetchWeatherByCity = jest.fn(), loading = false) => {
+  render(
+    <SearchBar fetchWeatherByCity={fetchWeatherByCity} loading={loading} />
+  );
   const input = screen.getByPlaceholderText(/enter city name/i);
   const button = screen.getByRole("button", { name: /search/i });
   return { input, button, fetchWeatherByCity };
