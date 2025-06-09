@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 const SearchBar = ({ fetchWeatherByCity, loading }) => {
   const [city, setCity] = useState("");
@@ -28,13 +29,19 @@ const SearchBar = ({ fetchWeatherByCity, loading }) => {
         value={city}
         onChange={handleInputChange}
         placeholder="Enter city name"
+        aria-label="City"
         disabled={loading}
       />
       <button type="submit" disabled={loading}>
         {loading ? "Searching..." : "Search"}
-      </button>{" "}
+      </button>
     </form>
   );
+};
+
+SearchBar.propTypes = {
+  fetchWeatherByCity: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default SearchBar;
