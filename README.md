@@ -52,6 +52,16 @@ weather-app
 
 4. Open your browser and navigate to `http://localhost:3000` to view the app.
 
+## Linting
+
+To check the code style using ESLint, run:
+
+```
+npm run lint
+```
+
+This will lint the source files in the `src` directory according to the project's ESLint configuration.
+
 ## Running Tests Locally
 
 To run tests for this project, use the following command in your project directory:
