@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const WeatherDisplay = ({ weatherData }) => {
   if (!weatherData) {
@@ -27,6 +28,22 @@ const WeatherDisplay = ({ weatherData }) => {
       )}
     </div>
   );
+};
+
+WeatherDisplay.propTypes = {
+  weatherData: PropTypes.shape({
+    temperature: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    forecast: PropTypes.arrayOf(
+      PropTypes.shape({
+        date: PropTypes.string.isRequired,
+        minTemp: PropTypes.number.isRequired,
+        maxTemp: PropTypes.number.isRequired,
+        description: PropTypes.string.isRequired,
+      })
+    ),
+  }),
 };
 
 export default WeatherDisplay;

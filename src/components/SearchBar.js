@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 const SearchBar = ({ fetchWeatherByCity, loading }) => {
   const [city, setCity] = useState("");
@@ -36,6 +37,11 @@ const SearchBar = ({ fetchWeatherByCity, loading }) => {
       </button>
     </form>
   );
+};
+
+SearchBar.propTypes = {
+  fetchWeatherByCity: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default SearchBar;

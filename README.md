@@ -42,6 +42,7 @@ weather-app
    ```
    npm install
    ```
+   This will install all required packages, including the `prop-types` library used for runtime type checking.
 
 3. Start the application:
 
