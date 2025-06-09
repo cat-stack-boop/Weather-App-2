@@ -28,11 +28,12 @@ const SearchBar = ({ fetchWeatherByCity, loading }) => {
         value={city}
         onChange={handleInputChange}
         placeholder="Enter city name"
+        aria-label="City"
         disabled={loading}
       />
       <button type="submit" disabled={loading}>
         {loading ? "Searching..." : "Search"}
-      </button>{" "}
+      </button>
     </form>
   );
 };
