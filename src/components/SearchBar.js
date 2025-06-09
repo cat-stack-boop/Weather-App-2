@@ -16,7 +16,7 @@ const SearchBar = ({ fetchWeatherByCity, loading }) => {
       try {
         await fetchWeatherByCity(trimmedCity);
       } catch (e) {
-        console.log("error search");
+        // Error handling is delegated to the parent component
       }
       setCity("");
     }
